@@ -13,10 +13,12 @@ class Solution(object):
                 self.mark(grid, overlay, i+1, j, count)
             if (j+1 < self.width):
                 self.mark(grid, overlay, i, j + 1, count)
+            if (j-1) > 0:
+                self.mark(grid, overlay, i, j - 1, count)
 
-    def show(self, grid):
+    def show(self, grid, overlay):
         for i in range(self.heigth):
-            print(grid[i]),
+            print(grid[i], overlay[i]),
 
 
     def numIsland(self, grid):
@@ -31,6 +33,7 @@ class Solution(object):
                 if (grid[i][j] == 1 and overlay[i][j] == 0):
                     count += 1
                     self.mark(grid, overlay, i, j, count)
+        self.show(grid, overlay)
         return count
 
 
@@ -48,8 +51,19 @@ grid2 = [
     [0,0,1,0,0],
     [0,0,0,1,1]
 ]
+
+grid3 = [
+    [1,1,0,0,0,1,0,0],
+    [1,1,0,0,0,1,0,0],
+    [1,0,1,0,0,0,0,1],
+    [0,0,0,1,1,0,1,1],
+    [0,0,0,0,0,1,0,0],
+    [0,0,0,0,0,1,0,0],
+]
 x.numIsland(grid)
 print()
 x.numIsland(grid2)
+print()
+x.numIsland(grid3)
 
 
