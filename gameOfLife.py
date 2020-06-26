@@ -16,8 +16,6 @@ class Solution(object):
             print(board[i], overlay[i], nextGen[i]),
 
     def getNextGen(self, board, overlay):
-
-
         nextGen = []
         for i in range(self.heigth):
             nextGen.append([])
