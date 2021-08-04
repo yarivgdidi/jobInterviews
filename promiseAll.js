@@ -51,3 +51,4 @@ myPromiseAllSafe = taskList => {
 const tasksF = [taskF(1000), taskF(5000), taskF(2500), taskF(3000), taskF(5500), taskF(3100)]
 myPromiseAll(tasksF).then(results => console.log(results)).catch(err => console.log(err))
 myPromiseAllSafe(tasksF).then(results => console.log(results)).catch(err => console.log(err))
+
