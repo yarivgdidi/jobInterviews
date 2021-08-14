@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/container-with-most-water/
 
-def getConteinerHeight(a, b):
+def getContainerHeight(a, b):
     return min(a,b)
 
 def getContainerWidth(i,j):
